@@ -1,0 +1,30 @@
+$main-bg: #e5e5e5;
+$pm-bg: #046b2d;
+$sc-bg: #dfeeff;
+$pm-txt: #333333;
+$light-txt: rgba(51, 51, 51, 0.8);
+$sc-txt: rgba(65, 56, 51, 0.8);
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == xs {
+    @media screen and (max-width: 57.598em) {
+      @content;
+    }
+  } @else if $breakpoint == sm {
+    @media screen and (max-width: 76.798em) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media screen and (max-width: 99.198em) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media screen and (max-width: 119.998em) {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: 120em) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,149 @@
+@import "../variables.scss";
+
+.user {
+  padding: 1rem;
+  padding-top: 0.25rem;
+
+  .titleCol {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem !important;
+
+    .face {
+      margin-right: 1rem;
+
+      @include respond(sm) {
+        width: 115px !important;
+      }
+    }
+    p {
+      @include respond(sm) {
+        font-size: 1.5rem !important;
+      }
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 16px;
+
+      > span {
+        font-weight: 400;
+        font-size: 1rem;
+        color: $light-txt;
+      }
+    }
+  }
+
+  .hrDiv {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(
+      to right,
+      white 0%,
+      rgba(51, 51, 51, 0.5) 25%,
+      white 100%
+    ) !important;
+  }
+
+  .detailDiv {
+    @include respond(sm) {
+      padding: 1rem 0rem;
+      font-size: 1rem;
+    }
+    text-align: left;
+    padding: 1rem 2.5rem 1rem 2.5rem;
+    span {
+      display: block;
+    }
+
+    .subTitle {
+      font-weight: 300;
+    }
+
+    .hrSpan {
+      width: 15%;
+      height: 2px;
+      margin: 0.1rem;
+      background: linear-gradient(to right, $pm-bg, white);
+    }
+
+    .detail {
+      font-weight: 500;
+    }
+  }
+
+  .aboutDiv {
+    @include respond(md) {
+      margin-top: 1rem !important;
+    }
+    @include respond(xl) {
+      margin-top: 1rem !important;
+    }
+    @include respond(sm) {
+      padding: 1rem 0rem;
+      font-size: 1rem;
+      border-radius: 1.5rem;
+    }
+
+    border: 1px solid rgba(128, 128, 128, 0.5);
+    background: #dfeeff9d;
+    border-radius: 3rem;
+    text-align: center;
+    margin-top: 0rem !important;
+    padding: 1rem 2.5rem 1rem 2.5rem;
+    > p > span {
+      display: block;
+    }
+
+    .subTitle {
+      font-weight: 300;
+    }
+
+    .hrSpan {
+      width: 100%;
+      height: 2px;
+      margin: 0.1rem;
+      background: linear-gradient(to right, $sc-bg 0%, $pm-bg 40%, $sc-bg 90%);
+    }
+
+    .detail {
+      margin-top: 1rem;
+      font-weight: 500;
+    }
+    .likes,
+    .dislikes {
+      margin-top: 1.5rem !important;
+      font-weight: 500;
+      font-size: 0.9rem;
+
+      span {
+        padding: 0.25rem 0.5rem;
+        margin: 0.25rem;
+        border-radius: 5px;
+        font-weight: 200;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.8;
+        }
+
+        button {
+          cursor: pointer;
+          border: none;
+          background: transparent;
+        }
+      }
+    }
+
+    .dislikes {
+      span {
+        border: 1px solid #ff9800;
+        background: #ff990080;
+      }
+    }
+    .likes {
+      span {
+        border: 1px solid #cddc39;
+        background: #ccdc3980;
+      }
+    }
+  }
+}

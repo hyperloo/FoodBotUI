@@ -1,0 +1,217 @@
+@import "../variables.scss";
+
+.orders {
+  padding: 1rem;
+  padding-top: 0.25rem;
+
+  .titleCol {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem !important;
+
+    .face {
+      margin-right: 1rem;
+
+      @include respond(sm) {
+        width: 115px !important;
+      }
+    }
+    .address {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start !important;
+      text-align: left;
+
+      p {
+        @include respond(sm) {
+          font-size: 1.5rem !important;
+        }
+        text-align: left;
+        font-size: 2rem;
+        font-weight: 600;
+        margin: 0;
+      }
+      > span {
+        font-weight: 400;
+        font-size: 1rem;
+        color: $light-txt;
+      }
+
+      .id {
+        margin-bottom: -0.5rem;
+      }
+    }
+  }
+
+  .hrDiv {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(
+      to right,
+      white 0%,
+      rgba(51, 51, 51, 0.5) 25%,
+      white 100%
+    ) !important;
+  }
+
+  .OrderId {
+    margin: 0.75rem auto !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-around;
+
+    > span {
+      > span:first-child {
+        font-weight: 300 !important;
+      }
+    }
+  }
+  .search {
+    display: flex !important;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1rem !important;
+
+    input {
+      border: none;
+      background: rgba(202, 200, 200, 0.5);
+      padding: 0.25rem;
+      font-size: 0.85rem !important;
+      border-bottom: 2px solid $pm-bg;
+      text-align: center;
+      border-radius: 2.5px;
+      width: 40%;
+      max-width: 50%;
+    }
+    span {
+      width: 50%;
+      text-align: right;
+    }
+  }
+
+  .items {
+    ul {
+      list-style: none;
+      font-size: 1rem !important;
+
+      .item {
+        text-align: left;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        img {
+          z-index: 1;
+          height: 8.5rem;
+          width: auto;
+          border-radius: 1rem;
+          border: 3px solid rgba(185, 185, 185, 0.493);
+          @include respond(sm) {
+            height: 6rem !important;
+            width: auto;
+          }
+          @include respond(md) {
+            height: 7rem !important;
+            width: auto;
+          }
+        }
+
+        .text {
+          width: 100%;
+          margin: 0.5rem auto;
+          border: 1px solid $sc-bg;
+          background: #dfeeffd8;
+          padding: 2rem 3rem;
+          margin-left: -1.6rem;
+          border-radius: 10px;
+
+          @include respond(sm) {
+            padding: 0.8rem 1.7rem;
+            margin-left: -1rem;
+          }
+
+          p {
+            line-height: 5px;
+            font-size: 1.2rem;
+            font-weight: 600;
+
+            @include respond(sm) {
+              font-size: 1rem;
+            }
+          }
+          p:first-child {
+            font-size: 0.85rem;
+            color: rgba(51, 51, 51, 0.5);
+            font-weight: 200;
+
+            @include respond(sm) {
+              font-size: 0.65rem;
+            }
+          }
+          p:nth-child(3) {
+            color: rgba(51, 51, 51, 0.75);
+            font-size: 0.9rem;
+            font-weight: 400;
+
+            @include respond(sm) {
+              font-size: 0.7rem;
+            }
+          }
+
+          .finalPrice {
+            margin-top: 0.5rem;
+            line-height: 13px;
+            font-size: 1.2rem;
+            font-weight: 400 !important;
+            color: rgba(0, 0, 0, 0.87) !important;
+          }
+
+          .qty {
+            padding: 0;
+            font-size: 0.8rem;
+            font-weight: normal;
+            border: 1px solid $pm-bg;
+            display: inline-block;
+
+            button {
+              background-color: $pm-bg;
+              color: white;
+              font-size: 1rem;
+              padding: 0.25rem 0.5rem;
+              border: 0;
+              margin: 0;
+              position: relative;
+              cursor: pointer !important;
+              z-index: 100;
+
+              &:first-child {
+                border-right: 1px solid rgba(0, 0, 0, 0.514);
+                margin-right: 0.2rem;
+              }
+              &:last-child {
+                margin-left: 0.2rem;
+                border-left: 1px solid rgba(0, 0, 0, 0.514);
+              }
+
+              &:hover {
+                opacity: 0.75;
+              }
+              &:focus,
+              &:active {
+                outline: none;
+              }
+              &:disabled {
+                background: gray;
+              }
+
+              @include respond(sm) {
+                padding: 0.15rem 0.35rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
